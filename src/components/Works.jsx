@@ -34,7 +34,7 @@ const Works = () => {
       title: "My Portfolio Website",
       description:
         "A responsive and user-friendly portfolio website built using React and Tailwind CSS, in a Vite Development. The website showcases my skills, experience, and works, providing a personalized and professional touch.",
-      technologies: ["React", "Tailwind CSS", "Vite", "Node.js", "Heroku"],
+      technologies: ["React", "Tailwind CSS", "Vite", "Node.js", "Heroku", "EmailJS", "Flowise"],
       previewImage: "/images/portfolio.png",
       websiteUrl: "/"
     },
