@@ -42,7 +42,7 @@ export default function ContactForm() {
     if (!emailRegex.test(formData.email)) {
       setSubmitStatus("Please enter a valid email address.");
       setStatusType("error");
-      return;
+      return; 
     }
 
     setIsSubmitting(true);
