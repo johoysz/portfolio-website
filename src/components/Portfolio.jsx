@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 import AboutMe from "./AboutMe";
 import Skills from "./Skills";
 import Works from "./Works";
+import ContactForm from "./ContactForm";
 
 const titles = ["Developer", "Editor"];
 
@@ -63,9 +64,7 @@ const Portfolio = () => {
         <div className="flex justify-center items-center space-x-4">
           {/* Let's Talk - Mail */}
           <a
-            href="mailto:joy.buangjug@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#contact"
             className="flex items-center px-6 py-3 rounded-full bg-transparent border border-white text-white hover:bg-white hover:text-gray-800 transition-colors"
           >
             Let's Talk <Mail className="ml-2 w-5 h-5" />
@@ -84,6 +83,7 @@ const Portfolio = () => {
       <AboutMe />
       <Skills />
       <Works />
+      <ContactForm />
     </div>
   );
 };

@@ -105,8 +105,21 @@ const Sidebar = () => {
           />
         </a>
       </div>
-      <div className="p-2 hover:bg-gray-700 rounded-full">
-        <Mail className="text-gray-400 hover:text-white" />
+      <div className="flex items-center justify-center">
+        <a
+          href="#contact"
+          className={`p-2 rounded-full ${
+            activeSection === "contact" ? "bg-gray-700" : "hover:bg-gray-700"
+          }`}
+        >
+          <Mail
+            className={`${
+              activeSection === "contact"
+                ? "text-white"
+                : "text-gray-400 hover:text-white"
+            }`}
+          />
+        </a>
       </div>
     </div>
   );
