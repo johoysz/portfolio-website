@@ -9,7 +9,7 @@ const Works = () => {
       title: "EnviScape Website (Capstone Project)",
       description: "A virtual tour service provider that enables schools to engage students through interactive and personalized virtual tours, helping them explore campus life, facilities, and community in an immersive way.",
       technologies: ["React", "Tailwind CSS", "Laravel", "MySQL", "Cloudinary", "Heroku", "Google Analytics", "CloudPano", "Tawk.to" , "Vite"],
-      previewImage: "/public/images/enviscape.png", // Website preview placeholder
+      previewImage: "/images/enviscape.png", // Website preview placeholder
       websiteUrl: "https://enviscape-972a5cd3556e.herokuapp.com/"
     },
     {
@@ -17,7 +17,7 @@ const Works = () => {
       title: "CLI Payment System (Internship Project)",
       description: "An online payment system for its clients, powered by Paynamics Technologies. This integration enables buyers to settle payments through various channels, including e-wallets like GCash, online banking, and over-the-counter options such as 7-Eleven, SM Bills Payment, and MLhuillier. The system ensures real-time transaction notifications and efficient fund transfers, enhancing the overall customer experience.",
       technologies: ["React", "Tailwind CSS", "Laravel", "PostgreSQL", "Paynamics", "Vite"],
-      previewImage: "/public/images/cli.png",
+      previewImage: "/images/cli.png",
       websiteUrl: "/cli-payment"
     },
     {
