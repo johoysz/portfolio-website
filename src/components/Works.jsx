@@ -8,7 +8,7 @@ const Works = () => {
       id: 1,
       title: "EnviScape Website (Capstone Project)",
       description: "A virtual tour service provider that enables schools to engage students through interactive and personalized virtual tours, helping them explore campus life, facilities, and community in an immersive way.",
-      technologies: ["React", "Tailwind CSS", "Laravel", "MySQL", "Cloudinary", "Heroku", "Google Analytics", "CloudPano", "Tawk.to" , "Vite"],
+      technologies: ["React", "Tailwind CSS", "Laravel", "MySQL", "Cloudinary", "Heroku", "Google Analytics", "CloudPano", "Tawk.to" , "Vite", "PayMongo"],
       previewImage: "/images/enviscape.png", // Website preview placeholder
       websiteUrl: "https://enviscape-972a5cd3556e.herokuapp.com/"
     },
