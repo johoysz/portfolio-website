@@ -56,8 +56,7 @@ const Portfolio = () => {
 
         <div className="mb-12">
           <p className="text-lg max-w-xl mx-auto text-gray-300">
-            I help businesses grow by crafting amazing web experiences. If
-            you're looking for a developer that likes to get stuff done,
+            I’m a graduating IT student passionate about turning ideas into real, working websites. I may be new to the field, but I know how to get things done and keep learning as I go.
           </p>
           <br />
         </div>
