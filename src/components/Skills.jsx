@@ -100,7 +100,7 @@ const Skills = () => {
             <GitBranch className="text-gray-800 mr-3" size={24} />
             <div>
               <h3 className="text-gray-800 font-medium">Version Control</h3>
-              <p className="text-gray-700 text-sm">Git・GitHub・GitLab</p>
+              <p className="text-gray-700 text-sm">Git・GitHub</p>
             </div>
           </div>
         </div>
