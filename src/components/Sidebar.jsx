@@ -6,7 +6,7 @@ const Sidebar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["main", "about-me", "skills", "projects", "contact"];
+      const sections = ["main", "about-me", "skills", "works", "contact"];
       for (let section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -89,8 +89,21 @@ const Sidebar = () => {
           />
         </a>
       </div>
-      <div className="p-2 hover:bg-gray-700 rounded-full">
-        <Monitor className="text-gray-400 hover:text-white" />
+      <div className="flex items-center justify-center">
+        <a
+          href="#works"
+          className={`p-2 rounded-full ${
+            activeSection === "works" ? "bg-gray-700" : "hover:bg-gray-700"
+          }`}
+        >
+          <Monitor
+            className={`${
+              activeSection === "works"
+                ? "text-white"
+                : "text-gray-400 hover:text-white"
+            }`}
+          />
+        </a>
       </div>
       <div className="p-2 hover:bg-gray-700 rounded-full">
         <Mail className="text-gray-400 hover:text-white" />

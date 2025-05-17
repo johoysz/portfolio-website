@@ -1,9 +1,20 @@
 import React from "react";
 import Me from "../assets/me.jpg";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const AboutMe = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  // Animation variants
+  const fadeUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
-    <section id='about-me'>
+    <section id='about-me' ref={ref}>
       <div className="mt-20 relative min-h-screen bg-gray-900 flex items-center justify-center overflow-hidden">
         {/* Topographic background pattern */}
         <div className="absolute inset-0 w-full h-full z-0">
@@ -42,38 +53,50 @@ const AboutMe = () => {
 
         {/* Main content container */}
         <div className="container mx-auto px-4 py-16 z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
-          {/* Left side - About Me title and text */}
-          <div className="w-full lg:w-full flex flex-col items-start">
-            <div className="border-2 border-white rounded-md px-8 py-4 mb-8">
+          {/* Left content */}
+          <motion.div
+            className="w-full lg:w-full flex flex-col items-start"
+            variants={fadeUp}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <motion.div
+              className="border-2 border-white rounded-md px-8 py-4 mb-8"
+              variants={fadeUp}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
               <h2 className="text-white text-3xl md:text-4xl font-bold">
                 About Me
               </h2>
-            </div>
+            </motion.div>
 
-            <div className="bg-gray-800/80 rounded-3xl p-6 md:p-8 backdrop-blur-sm text-white">
+            <motion.div
+              className="bg-gray-800/80 rounded-3xl p-6 md:p-8 backdrop-blur-sm text-white"
+              variants={fadeUp}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
               <div className="text-teal-400 mb-2">&lt;p&gt;</div>
               <div className="mb-6">
                 <h3 className="text-2xl font-semibold mb-2">Hello!</h3>
                 <p className="text-gray-300 text-sm md:text-base leading-relaxed">
                   I'm Joy Lyka S. Buangjug, an IT graduating student at the
                   University of Cebu - Main with a strong focus on web
-                  development. I specialize in both frontend and backend
-                  technologies like React, Laravel, and PostgreSQL. With over
-                  four years of experience in photo editing and design using
-                  Adobe Photoshop and Lightroom, I bring creative skills to my
-                  development projects.
-                  <br />
-                  <br />
-                  I'm passionate about learning, collaboration, and turning
-                  ideas into functional, user-friendly applications.
+                  development...
                 </p>
               </div>
               <div className="text-teal-400">&lt;/p&gt;</div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          {/* Right side - Developer image */}
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+          {/* Right content - image */}
+          <motion.div
+            className="w-full lg:w-1/2 flex justify-center lg:justify-end"
+            variants={fadeUp}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
             <div className="relative w-full max-w-md">
               <img
                 src={Me}
@@ -81,7 +104,7 @@ const AboutMe = () => {
                 className="rounded-xl shadow-lg w-full"
               />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
